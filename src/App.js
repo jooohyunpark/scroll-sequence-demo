@@ -1,14 +1,18 @@
 import React from 'react'
 import '@/styles/main.scss'
 
-import Button from './components/Button'
+import ScrollSection from './components/ScrollSection'
 
 const App = () => {
   return (
     <div>
-      <h1>react webpack boilerplate</h1>
+      <h1>🎵</h1>
 
-      <Button />
+      <div style={{ width: '100%', height: 800, background: 'orange' }} />
+
+      <ScrollSection />
+
+      <div style={{ width: '100%', height: 800, background: 'orange' }} />
     </div>
   )
 }
