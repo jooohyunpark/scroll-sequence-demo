@@ -18,14 +18,26 @@ import {
 } from './styles'
 
 const ScrollModule = ({
-  frameCount = 150,
-  dimension = { width: 1280, height: 720 },
-  path = '',
-  startAt = 0,
-  endAt = 1,
-  indexNumberLength = 4,
-  firstFrameIndex = 0
+  sequenceConfig = {
+    frameCount: 150,
+    dimension: { width: 1280, height: 720 },
+    path: '',
+    startAt: 0,
+    endAt: 1,
+    indexPadLength: 4,
+    firstFrameIndex: 0
+  }
 }) => {
+  const {
+    frameCount,
+    dimension,
+    path,
+    startAt,
+    endAt,
+    indexPadLength,
+    firstFrameIndex
+  } = sequenceConfig
+
   const ref = useRef(null)
   const canvasRef = useRef(null)
   const imageArrayRef = useRef(new Array(frameCount))
@@ -35,9 +47,7 @@ const ScrollModule = ({
   })
 
   const currentFrame = index =>
-    `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
-      .toString()
-      .padStart(indexNumberLength, '0')}.jpg`
+    `${path}${index.toString().padStart(indexPadLength, '0')}.jpg`
 
   // Create image elements
   const loadImage = i =>
