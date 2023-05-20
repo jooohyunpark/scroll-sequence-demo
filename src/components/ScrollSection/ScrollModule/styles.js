@@ -36,7 +36,9 @@ export const H1Container = styled.div`
   transform: translate(-50%, -50%);
 `
 
-export const HeadlineH1 = styled(motion.h1)`
-  color: black;
+export const H1 = styled(motion.h1)`
+  font-size: 80px;
   white-space: pre;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
 `

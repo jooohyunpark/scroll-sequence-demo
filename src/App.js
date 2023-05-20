@@ -8,11 +8,11 @@ const App = () => {
     <div>
       <h1>🎵</h1>
 
-      <div style={{ width: '100%', height: 800, background: 'orange' }} />
+      <div style={{ width: '100%', height: '100vh', background: 'orange' }} />
 
       <ScrollSection />
 
-      <div style={{ width: '100%', height: 800, background: 'orange' }} />
+      <div style={{ width: '100%', height: '100vh', background: 'orange' }} />
     </div>
   )
 }

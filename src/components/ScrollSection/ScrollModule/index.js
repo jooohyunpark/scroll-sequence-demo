@@ -12,9 +12,7 @@ import {
   StickyContainerLayout,
   Canvas,
   H1Container,
-  HeadlineH1,
-  Headline1,
-  Headline2
+  H1
 } from './styles'
 
 const ScrollModule = ({
@@ -100,16 +98,15 @@ const ScrollModule = ({
   })
 
   //
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0], {
-    ease: easeInOut
-  })
-  const scale = useTransform(scrollYProgress, [0, 0.1], [1.5, 1], {
-    ease: easeInOut
-  })
-  const headline1X = useTransform(scrollYProgress, [0, 0.5], ['0%', '-100%'], {
-    ease: easeInOut
-  })
-  const headline2X = useTransform(scrollYProgress, [0, 0.5], ['0%', '100%'], {
+  const opacity = useTransform(
+    scrollYProgress,
+    [0.6, 0.7, 0.9, 1],
+    [0, 1, 1, 0],
+    {
+      ease: easeInOut
+    }
+  )
+  const scale = useTransform(scrollYProgress, [0.6, 0.9, 1], [1, 1.1, 5], {
     ease: easeInOut
   })
 
@@ -121,6 +118,10 @@ const ScrollModule = ({
           width={dimension.width}
           height={dimension.height}
         />
+
+        <H1Container>
+          <H1 style={{ opacity, scale }}>Scoll sequence is cool</H1>
+        </H1Container>
       </StickyContainerLayout>
     </ScrollLayout>
   )
