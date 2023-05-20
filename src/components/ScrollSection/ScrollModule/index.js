@@ -23,7 +23,7 @@ const ScrollModule = ({
   path = '',
   startAt = 0,
   endAt = 1,
-  indexNumberLength = 5,
+  indexNumberLength = 4,
   firstFrameIndex = 0
 }) => {
   const ref = useRef(null)
@@ -35,7 +35,9 @@ const ScrollModule = ({
   })
 
   const currentFrame = index =>
-    getAssetPath(`${path}${index.toString().padStart(indexNumberLength, '0')}`)
+    `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index
+      .toString()
+      .padStart(indexNumberLength, '0')}.jpg`
 
   // Create image elements
   const loadImage = i =>
@@ -53,6 +55,8 @@ const ScrollModule = ({
       imageArrayRef.current[i] = loadImage(i)
     }
   }
+
+  console.log(imageArrayRef.current)
 
   const updateImage = async (index, canvas) => {
     if (!imageArrayRef.current[index]) {

@@ -1,19 +1,18 @@
 import React from 'react'
-import Section from '../partials/Section'
 import ScrollModule from './ScrollModule'
 
 export default function () {
   return (
-    <Section paddingY={{ top: false, bottom: true }}>
+    <section>
       <ScrollModule
-        frameCount={301}
-        indexNumberLength={5}
-        firstFrameIndex={0}
-        dimension={{ width: 1280, height: 573 }}
+        frameCount={147}
+        indexNumberLength={4}
+        firstFrameIndex={1}
+        dimension={{ width: 1158, height: 770 }}
         path="hero_desktop_"
         startAt={0}
         endAt={0.85}
       />
-    </Section>
+    </section>
   )
 }

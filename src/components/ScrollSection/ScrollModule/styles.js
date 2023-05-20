@@ -1,12 +1,11 @@
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
-import { MediaAbove } from '../../../styles/mixins'
 
 export const ScrollLayout = styled.div`
   position: relative;
   width: 100%;
   height: ${({ $height }) => $height};
-  background: white;
+  background: black;
 `
 
 export const StickyContainerLayout = styled.div`
@@ -25,8 +24,9 @@ export const StickyContainerLayout = styled.div`
 export const Canvas = styled.canvas`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   position: relative;
+  max-width: 1000px;
 `
 
 export const H1Container = styled.div`
@@ -40,7 +40,3 @@ export const HeadlineH1 = styled(motion.h1)`
   color: black;
   white-space: pre;
 `
-
-export const Headline1 = styled(motion.div)``
-
-export const Headline2 = styled(motion.div)``
