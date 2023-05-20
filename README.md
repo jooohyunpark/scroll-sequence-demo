@@ -1,2 +1,2 @@
 # scroll-sequence-demo
-Apple Airpod Pro style interaction
+Apple Airpod Pro style interaction 🎵
