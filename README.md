@@ -1,2 +1,2 @@
-# react-webpack-boilerplate
-React webpack boilerplate
+# scroll-sequence-demo
+Apple Airpod Pro style interaction
